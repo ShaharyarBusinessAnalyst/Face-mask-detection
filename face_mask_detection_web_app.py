@@ -98,7 +98,7 @@ def main():
 
         #creating a button for prediction
         if st.button('Image result'):
-            face_detection(image)
+            conclusion = face_detection(image)
 
         st.success(conclusion)
 
