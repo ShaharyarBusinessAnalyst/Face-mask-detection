@@ -41,7 +41,7 @@ st.write("Model loaded successfully!")
 # In[ ]:
 
 
-def face_detection(input_image_path):
+def face_detection(input_image):
 
     if isinstance(input_image, Image.Image):
         input_image = np.array(input_image)
