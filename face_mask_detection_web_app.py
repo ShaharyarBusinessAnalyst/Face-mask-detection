@@ -13,7 +13,8 @@ from PIL import Image
 #import cv2
 import matplotlib.pyplot as plt
 import requests
-
+import tensorflow as tf
+from tensorflow import keras
 
 # In[4]:
 
