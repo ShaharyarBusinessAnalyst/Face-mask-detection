@@ -10,7 +10,7 @@ import numpy as np
 import pickle
 import streamlit as st
 from PIL import Image
-import cv2
+#import cv2
 import matplotlib.pyplot as plt
 import requests
 
@@ -46,11 +46,17 @@ def face_detection(input_image_path):
         input_image = np.array(input_image)
         
     #input_image = cv2.imread(input_image_path)
-    
     #plt.imshow(input_image)
+    #input_image_resized = cv2.resize(input_image, (128,128))
     
-    input_image_resized = cv2.resize(input_image, (128,128))
-    
+    # Convert the image to a Pillow Image object
+    pil_image = Image.fromarray(input_image)
+
+    # Resize the image using Pillow
+    input_image_resized = pil_image.resize((128, 128))  # Resize to 128x128
+
+    # Convert the resized image back to a NumPy array (if needed)
+    input_image_resized = np.array(input_image_resized)
     input_image_scaled = input_image_resized/255
     
     input_image_reshaped = np.reshape(input_image_scaled, [1,128,128,3])
