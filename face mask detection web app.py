@@ -28,7 +28,7 @@ def load_model_from_drive(url):
     with open("face_mask_detection_model.sav", "rb") as f:
         return pickle.load(f)
 
-model_url = "https://drive.google.com/file/d/1UPCuyxIouOYMeQkrfBEO9OQ9TpwWo3u6/view?usp=sharing"  # Replace <FILE_ID> with your file ID
+model_url = "https://drive.google.com/uc?export=download&id=1UPCuyxIouOYMeQkrfBEO9OQ9TpwWo3u6"  # Replace <FILE_ID> with your file ID
 st.write("Loading model from Google Drive...")
 loaded_model = load_model_from_drive(model_url)
 st.write("Model loaded successfully!")
