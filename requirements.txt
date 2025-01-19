@@ -1,7 +1,7 @@
 numpy
 streamlit
 Pillow  # 'PIL' is now 'Pillow' in modern versions
-opencv-python
+opencv-contrib-python
 matplotlib
 requests
 cv2
