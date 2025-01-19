@@ -1,0 +1,6 @@
+numpy
+streamlit
+Pillow  # 'PIL' is now 'Pillow' in modern versions
+opencv-python
+matplotlib
+requests
