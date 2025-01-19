@@ -6,9 +6,9 @@
 
 pip install -r requirements.txt
 
-import numpy
+import numpy as np
 import pickle
-import streamlit
+import streamlit as st
 from PIL import Image
 import cv2
 import matplotlib.pyplot as plt
@@ -55,7 +55,7 @@ def face_detection(input_image_path):
     
     input_image_reshaped = np.reshape(input_image_scaled, [1,128,128,3])
     
-    input_prediction = model.predict(input_image_reshaped)
+    input_prediction = loaded_model.predict(input_image_reshaped)
     
     print(input_prediction)
     
@@ -77,7 +77,7 @@ def main():
     st.title('Face mask detection web app')
 
     #getting the input from user
-    image = st.file_uploader('Please upload the image', type=["jpg", "jpeg", "png"])
+    uploaded_file = st.file_uploader('Please upload the image', type=["jpg", "jpeg", "png"])
     
     if uploaded_file is not None:
         # Open image using PIL
